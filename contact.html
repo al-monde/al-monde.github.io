@@ -1,0 +1,138 @@
+<!-- 
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1
+Author: Grigory Kovtun
+ID: s3927476
+Acknowledgements: 
+W3Studio, RMIT lecture slides for ways to interact with HTML and CSS.
+The Ancient Greece color palette was taken from https://www.color-hex.com/color-palette/56669
+Backround picture: https://www.mdpi.com/2571-9408/6/8/296
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/0e53af926d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Ancient Library</title>
+</head>
+
+<body>
+  <!-- header -->
+
+  <header>
+    <div class="header-container">
+      <h1 href="index.html">ANCIENT LIBRARY</h1>
+      <nav class="navbar">
+        <input type='checkbox' id='check' />
+        <span class="menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="roman.html">ROMAN</a></li>
+          <li><a href="greek.html">GREEK</a></li>
+          <li><a class="active" href="contact.html">CONTACT</a></li>
+          <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+      </nav>
+      <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+    </div>
+  </header>
+
+  <!-- contact -->
+
+  <div class="contact_form">
+    <div class="title">
+      <h1>
+        Contact us
+      </h1>
+    </div>
+    <form>
+      <select name="contact-purpose" id="contact-purpose" required>
+        <option value="none">Choose a purpose</option>
+        <option value="sell">I want to sell books</option>
+        <option value="buy">I want to buy books</option>
+      </select>
+      <div class="formInfo">
+        <div class="inputfield">
+          <label class="name" for="firstname">Firstname</label>
+          <input id="firstname" type="text" name="name" class="name" placeholder="Please enter your firstname"
+            required="required">
+        </div>
+        <div class="inputfield">
+          <label class="name" for="lastname">Lastname</label>
+          <input id="formlastname" type="text" name="surname" class="name" placeholder="Please enter your lastname"
+            required="required">
+        </div>
+        <div class="inputfield">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" class="contactinfo" placeholder="Please enter your email"
+            required="required">
+        </div>
+
+        <div class="inputfield">
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel" name="phone" class="contactinfo" placeholder="Please enter your phone"
+            required="required">
+        </div>
+        <label>Contact preference:</label>
+        <div>
+
+          <label for="byemail">By email</label>
+          <input type="checkbox" name="byemail" id="byemail" value="email">
+        </div>
+
+        <div>
+          <label for="byphone">By phone</label>
+          <input type="checkbox" name="byphone" id="byphone" value="phone">
+        </div>
+        <label>Receive weekly newsletter:</label>
+        <div>
+          <label for="yes">Yes</label>
+          <input type="radio" name="newsletter" id="yes" value="yes" checked>
+        </div>
+        <div>
+          <label for="no">No</label>
+          <input type="radio" name="newsletter" id="no" value="no">
+        </div>
+      </div>
+      <div class="form_note">
+        <label for="notes">Notes:</label><br>
+        <textarea name="notes" id="notes"></textarea>
+      </div>
+      <div class="button">
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- footer -->
+
+  <footer id="footer">
+    <div class="footer_links">
+      <a>|</a>
+      <a href="">About Us</a>
+      <a>|</a>
+      <a href="">Privacy Policy</a>
+      <a>|</a>
+      <a href="">Terms</a>
+      <a>|</a>
+      <a href="">Copyright</a>
+      <a>|</a>
+      <a href="contact.html"> Contact Us</a>
+      <a>|</a>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy; 2023 HCM STUDIO
+    </div>
+  </footer>
+
+</html>
